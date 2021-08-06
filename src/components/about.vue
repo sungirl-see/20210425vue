@@ -1,6 +1,8 @@
 <template>
     <div>
-        <p>about</p>
+        <!-- <p>about</p> -->
+        <component :is="cut"></component>
+        <button @click="current">点击切换</button>
     </div>
 </template>
 <script>
@@ -18,6 +20,9 @@ export default {
                 this.$store.dispatch("Astro").then(res=>{
                 console.log('-+-+-+-+-+-+',res)
             })
+         },
+         current(){
+             
          }
     }
 }
